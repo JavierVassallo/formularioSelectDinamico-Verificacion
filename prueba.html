@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+    <body>
+    <div class="card align-items-center justify-content-center" style="margin-top:5%;">
+    <div class="card-header">
+    <p>Recuerde que esto solo lo desuscribira de el envio de la factura digital, no del servicio.</p>
+    <p>A continuacion seleccione la cantidad de unidades a la que va a desuscribir de la factura digital, haciendo esto dejara de recibir por e-mail la informacion de esas facturas</p>
+    </div>
+    <div class="card-body">
+    <div class="row align-items-center justify-content-center">
+    <div class="col-md-12 center">
+      <form id="formulario" action="confirmacion.php" method="post"  onsubmit="return false;">
+                    <input type="email" name="email" value="dlnk" style="display:none;"></input>
+                    <div class="form-group">
+                        <select class="form-control"   id="cantidad" > <!-- Si no le paso name aca al select no pasa por el post -->
+                        <option value="" slected="selected">Seleccione la Cantidad</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="newUF">
+                      
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="validar();">Confirmar</button>
+                </form>
+                </div>
+                <div>
+                </div>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        function validar(){
+            var cantidad=document.getElementById('cantidad').value;
+            alert(cantidad);
+        }
+        </script>
+    </body>
+</html>
